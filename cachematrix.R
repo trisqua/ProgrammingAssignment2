@@ -12,7 +12,6 @@ makeCacheMatrix <- function(x = matrix()) {
         setinverse <- function(solve) s <<- solve
         getinverse <- function() s
         list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
-        
 }
 
 ## The makeCacheMatrix function has only one required argument: the matrix of interest, 'x'. 
@@ -37,7 +36,6 @@ cacheSolve <- function(x, ...) {
         s <- solve(data,...)
         x$setinverse(s)
         s
-        ## Return a matrix that is the inverse of 'x'
 }
 
 ## The cacheSolve function also has only one required argument: the output of funcion makeCacheMatrix 'x'
